@@ -1,0 +1,6 @@
+.auth-img {
+    background-image: url('../images/auth.jpg'); /* Ganti sesuai nama file kamu */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
