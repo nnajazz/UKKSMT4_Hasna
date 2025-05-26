@@ -8,7 +8,7 @@
     <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
     <meta content="Pichforest" name="author" />
 
-    @include('include.style')
+    @include('include.styledash')
 </head>
 
 <body>
@@ -37,10 +37,11 @@
                                 <h5>Welcome Back!</h5>
                                 <p>Sign in to continue to Dashonic.</p>
                             </div>
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="post" action="{{ route('auth') }}">
+                                @csrf
                                 <div class="form-floating form-floating-custom mb-3">
-                                    <input type="text" class="form-control" id="input-username" name="username" placeholder="Enter Username">
-                                    <label for="input-username">Username</label>
+                                    <input type="email" class="form-control" id="input-username" name="email" placeholder="Enter Username">
+                                    <label for="input-username">Email</label>
                                     <div class="form-floating-icon">
                                         <i class="uil uil-users-alt"></i>
                                     </div>

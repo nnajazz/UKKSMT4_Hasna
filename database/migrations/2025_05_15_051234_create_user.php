@@ -13,9 +13,9 @@ return new class extends Migration
     public function up(): void
     {
         User::create([
-            'name' => 'hasna',
-            'email' => 'hasna@gmail.com',
-            'password' => bcrypt('12345')
+            'name' => 'tian',
+            'email' => 'tian@gmail.com',
+            'password' => bcrypt('12345678')
         ]);
     }
 

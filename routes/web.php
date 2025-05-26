@@ -3,8 +3,6 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\logincontroller;
-use App\Http\Controllers\PegawaiController;
-use App\Http\Controllers\registercontroller;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
@@ -21,10 +19,16 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 Route::get('/', function () {
     return view('master.master');
 });
-Route::get('/login', [loginController::class, 'index'])->name('login');
-Route::post('/auth', [loginController::class, 'authenticate'])->name('auth');
+Route::get('/login', [logincontroller::class, 'index'])->name('login');
+Route::post('/auth', [logincontroller::class, 'authenticate'])->name('auth');
 
 
+Route::group([
+    "prefix" => "/dashboard",
+    "as"     => "dashboard.admin."
+], function () {
+    Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+});
 
 // Rooute::group(["prefix" => "pegawai"])
-//
+//  

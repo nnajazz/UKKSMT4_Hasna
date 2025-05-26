@@ -34,8 +34,3 @@
 </script>
 <script src="{{ asset('assets/js/main.js') }}"></script>
 
-<!-- JS LOGIN -->
-<script src="{{ asset('assetsa/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('assetsa/libs/metismenujs/metismenujs.min.js') }}"></script>
-<script src="{{ asset('assetsa/libs/simplebar/simplebar.min.js') }}"></script>
-<script src="{{ asset('assetsa/libs/feather-icons/feather.min.js') }}"></script>
